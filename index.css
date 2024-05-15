@@ -1,0 +1,178 @@
+body {
+    font-family: 'Baloo Bhai 2', cursive;
+    color: black;
+
+}
+.header1{
+    width: 100%;
+    position:fixed;
+    top:0px;
+    left:0px;
+    height: 50px;
+    transition: all .5s;
+    background-color:rgba(29, 34, 55, 0.9);
+    z-index: 1999;
+}
+header::before {
+    content: "";
+    background-image: url('https://source.unsplash.com/random/1470x703?e-learning');
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+
+}
+
+.pic {
+    display: block;
+    width: 60px 40px;
+    height: 70px 40px;
+    float: left;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.navbar {
+    width: 60%;
+    height: 50px;
+    float: left;
+}
+
+.pic img {
+    width: 40px;
+    height: 50px;
+    margin: 0px;
+    float: left;
+}
+
+.navbar ul {
+    display: flex;
+    margin: 0px 150px;
+    margin-right: 50px;
+    padding: 04px 10px;
+
+}
+
+.navigation ul,li {
+    padding: 0px 30px;
+    flex-direction: row;
+
+}
+
+.navigation ul,
+li,
+a:link {
+    text-decoration: None;
+    list-style: none;
+
+}
+
+.right {
+    
+    float: left;
+    height: 80px;
+    margin-top:10px;
+    width: 200px;
+    margin-left: 200px;
+    padding: 0px 0px;
+
+}
+
+a:hover {
+    color: red;
+    text-decoration: None;
+}
+
+a {
+    color: black;
+    font-weight: bold;
+}
+
+.btn {
+    font-family: 'Baloo Bhai 2', cursive;
+    color: black;
+    padding: 5px;
+    margin-left: 0px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top: 150px;
+}
+
+section h1 {
+    font-size: 35px;
+    font-weight: bold;
+    font-family: Helvetica;
+    color: rgb(251, 21, 0);
+    margin: 0px 201px;
+}
+
+section p {
+    margin: 0px 201px;
+
+}
+
+nav {
+    margin: 70px 201px;
+}
+
+nav button {
+    background-color: rgb(255, 115, 0);
+    font-weight: bold;
+    border: none;
+    font-size: 17px;
+    padding: 8px 14px;
+}
+
+.box {
+    
+    width: 80%;
+    margin-left: 150px;
+    display: flex;
+    flex-direction: row;
+    text-align: justify;
+
+    
+}
+
+.box .item {
+    margin: 0px auto;
+    width: 33%;
+    text-align: center;
+    
+}
+.box p{
+    color:rgb(74, 74, 74);
+}
+.box h1:hover {
+    background-color: rgb(255, 115, 0);
+    
+}
+
+.box a:hover {
+    color: rgb(255, 115, 0);
+    align-items: center;
+
+}
+.mid{
+    text-align: center;
+    font-size:18px;
+}
+.mid h1{
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+.mid p{
+   margin-top:0px;
+   margin-bottom:0px;
+   color:rgb(74, 74, 74)
+}
+.item h1{
+    font-size:25px;
+    font-weight:bold;
+}

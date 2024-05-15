@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="js/jquery-slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="index.css">
+<title>Sign Up Form</title>
+
+<!-- Font Icon -->
+<link rel="stylesheet"
+	href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+<!-- Main css -->
+<link rel="stylesheet" href="css/style.css">
+<style>
+    .right {
+
+        border-radius: 1px;
+        width: 28%;
+        height: 100%;
+        margin: 200px 120px;
+        text-align: center;
+        float: right;
+        background-color: rgba(235, 166, 166, 0.242);
+    }
+
+    .right h1 {
+        margin-top: 20px;
+    }
+
+    .left {
+        text-align: center;
+        height: 300px;
+        margin: 200px 200px;
+        width: 30%;
+        font-size: 20px;
+        color: rgb(37, 35, 35);
+    }
+
+    .left h1 {
+        font-weight: bold;
+        font-size: 50px;
+        color: black;
+    }
+
+
+    .bottom a:hover {
+        color: #FE4066;
+    }
+
+    body {
+        font-family: 'Baloo Bhai 2', cursive;
+        color: black;
+
+    }
+
+    header::before {
+        content: "";
+        background-image: url('https://source.unsplash.com/random/1470x703?e-learning');
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.8;
+
+    }
+
+    .pic {
+        display: block;
+        width: 60px 40px;
+        height: 70px 40px;
+        float: left;
+        margin-right: 10px;
+        font-weight: bold;
+    }
+
+    .navbar {
+        width: 60%;
+        height: 50px;
+        float: left;
+    }
+
+    .pic img {
+        width: 40px;
+        height: 50px;
+        margin: 0px;
+        float: left;
+    }
+
+    .header1 {
+        width: 100%;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        transition: all .5s;
+        background-color: rgba(4, 9, 30, .9);
+        font-size: 20px;
+    }
+
+    .navbar ul {
+        display: flex;
+        margin: 0px 150px;
+        margin-right: 50px;
+        padding: 04px 10px;
+
+    }
+
+    .navigation ul,
+    li {
+        padding: 0px 30px;
+        flex-direction: row;
+
+    }
+
+    .navigation ul,
+    li,
+    a:link {
+        text-decoration: None;
+        list-style: none;
+
+    }
+
+    a:hover {
+        color: red;
+        text-decoration: None;
+    }
+
+    a {
+        color: black;
+        font-weight: bold;
+    }
+
+    .form-group input {
+        text-align: center;
+        font-size: 15px;
+        display: block;
+        width: 264px;
+        padding: 5px;
+        border: 1px solid black;
+        margin: 10px auto;
+        border-radius: 10px;
+        font-weight: bold;
+        font-family: 'Baloo Bhai 2', cursive;
+    }
+
+    .right button {
+        display: block;
+        width: 260px;
+        margin: 3px auto;
+        background-color: black;
+        color: grey;
+        font-family: 'Baloo Bhai 2', cursive;
+        font-weight: bold;
+        font-size: 18px;
+        border-radius: 10px;
+        margin-top: 15px;
+    }
+
+    .log {
+        width: 100%;
+        height: 50%;
+        display: flex;
+    }
+    #abc{
+        margin:50px 0px;
+        padding: 0px 0px;
+        
+    }
+    #Phone_number{
+        margin-top: 5px;
+    }
+</style>
+</head>
+<body>
+ <header>
+        <div class="header1">
+            <div class="pic">
+                <img src="Getskill.png" alt="">Get Skill
+            </div>
+            <div class="navbar">
+                <ul class="navigation">
+                    <li class="item"><a href="index.html">HOME</a></li>
+                    <li class="item"><a href="aboutus.html">ABOUT</a></li>
+                    <li class="item"><a href="Courses.html">COURSES</a></li>
+                    <li class="item"><a href="event.html">EVENTS</a></li>
+                    <li class="item"><a href="">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+<input type="hidden" id="status" value="%= request.getAttribute(status">
+
+	<div class="main">
+
+		<!-- Sign up form -->
+		<section class="signup">
+			<div class="container">
+				<div class="signup-content">
+					<div class="signup-form">
+						<h2 class="form-title">Sign up</h2>
+					
+						<form method="post" action="register" class="register-form"
+							id="register-form">
+							<div class="form-group">
+								<label for="name"><i
+									class="zmdi zmdi-account material-icons-name"></i></label> <input
+									type="text" name="name" id="name" placeholder="Your Name" />
+							</div>
+							<div class="form-group">
+								<label for="email"><i class="zmdi zmdi-email"></i></label> <input
+									type="email" name="email" id="email" placeholder="Your Email" />
+							</div>
+							<div class="form-group">
+								<label for="pass"><i class="zmdi zmdi-lock"></i></label> <input
+									type="password" name="pass" id="pass" placeholder="Password" />
+							</div>
+							<div class="form-group">
+								<label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+								<input type="password" name="re_pass" id="re_pass"
+									placeholder="Repeat your password" />
+							</div>
+							<div class="form-group">
+								<label for="contact"><i class="zmdi zmdi-lock-outline"></i></label>
+								<input type="text" name="contact" id="contact"
+									placeholder="Contact no" />
+							</div>
+							<div class="form-group">
+								<input type="checkbox" name="agree-term" id="agree-term"
+									class="agree-term" /> <label for="agree-term"
+									class="label-agree-term"><span><span></span></span>I
+									agree all statements in <a href="#" class="term-service">Terms
+										of service</a></label>
+							</div>
+							<div class="form-group form-button">
+								<input type="submit" name="signup" id="signup"
+									class="form-submit" value="Register" />
+							</div>
+						</form>
+					</div>
+					<div class="signup-image">
+						<figure>
+							<img src="images/signup-image.jpg" alt="sing up image">
+						</figure>
+						<a href="login.jsp" class="signup-image-link">I am already
+							member</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+	</div>
+	<!-- JS -->
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<link rel="stylesheet" href="alert/dist/sweetalert.css">
+	
+	<script type="text/javascript">
+	    var status = document.getElementById("status").value;
+	    if(status == "success"){
+	    	swal("Congrats","Account Created Successfully","success");
+	    }
+	
+	</script>
+
+
+
+</body>
+<!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
